@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrat de Partenariat - Tobi Studio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #007bff;
+            --dark-blue: #0056b3;
+            --light-blue: #e6f2ff;
+            --very-light-blue: #f5f9ff;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --border-light: #e0e0e0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+        }
+        
+        .contract-document {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px 40px;
+            background-color: white;
+        }
+        
+        .contract-header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            color: var(--primary-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            font-size: 14px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+        
+        p, li {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+        
+        .contract-section {
+            margin-bottom: 30px;
+        }
+        
+        .contract-section.blue-bg {
+            background-color: var(--very-light-blue);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary-blue);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        th {
+            background-color: var(--light-blue);
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--very-light-blue);
+        }
+        
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            page-break-inside: avoid;
+        }
+        
+        .signature-box {
+            width: 45%;
+            border-top: 1px solid var(--border-light);
+            padding-top: 10px;
+        }
+        
+        .signature-title {
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 10px;
+            color: var(--text-gray);
+            border-top: 1px solid var(--border-light);
+            padding-top: 20px;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .contract-document {
+                width: 100%;
+                padding: 20px;
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            @page {
+                size: A4;
+                margin: 20mm 15mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contract-document">
+        <div class="contract-header">
+            <img src="../images/logo-rond-2.webp" alt="Tobi Studio Logo" class="logo">
+            <h1>Contrat de Partenariat Agences Web</h1>
+            <p>Référence: TobiStudio-PART-<span id="current-date">20250514</span></p>
+        </div>
+        
+        <div class="contract-section blue-bg">
+            <p>Le présent contrat de partenariat (ci-après désigné "le Contrat") est conclu entre :</p>
+            <p><span class="highlight">Tobi Studio</span>, représenté par ses dirigeants en fonction (ci-après désigné "le Prestataire")</p>
+            <p>Et</p>
+            <p>La société ....................................... représentée par ........................................., en qualité de ........................................., (ci-après désignée "le Partenaire")</p>
+        </div>
+        
+        <h2>Article 1 : Objet du Contrat</h2>
+        <div class="contract-section">
+            <p>Le présent Contrat a pour objet de définir les conditions dans lesquelles le Prestataire s'engage à réaliser <span class="highlight">gratuitement</span> les sites web pour les clients du Partenaire, selon un modèle économique basé uniquement sur les frais d'hébergement.</p>
+            <p>Ce partenariat permet au Partenaire de <span class="highlight">conserver 100% des revenus</span> facturés à ses clients pour la création des sites web, sans avoir à supporter les coûts de production.</p>
+            <p>L'intégralité de cette collaboration s'effectue en <span class="highlight">marque blanche</span>, le Prestataire s'engageant à travailler dans la plus <span class="highlight">totale discrétion</span> sans jamais révéler son existence aux clients du Partenaire.</p>
+        </div>
+        
+        <h2>Article 2 : Modèle de Collaboration</h2>
+        <div class="contract-section">
+            <h3>2.1 Engagement du Prestataire</h3>
+            <p>Le Prestataire s'engage à :</p>
+            <ul>
+                <li>Développer <span class="highlight">gratuitement</span> les sites web pour les clients du Partenaire</li>
+                <li>Utiliser exclusivement du <span class="highlight">code personnalisé</span> (React, Vue.js, Node.js) pour garantir une optimisation et customisation maximale</li>
+                <li>Livrer les sites dans les délais convenus : <span class="highlight">2 semaines maximum</span> pour un site vitrine et <span class="highlight">4 à 6 semaines</span> pour un site e-commerce</li>
+                <li>Garantir une <span class="highlight">optimisation SEO personnalisée avec un score de 95/100</span></li>
+                <li>Fournir un <span class="highlight">dashboard administrateur complet</span> pour tous les sites e-commerce</li>
+                <li>Assurer l'hébergement, la sécurité et le maintien en ligne des sites</li>
+                <li>Respecter une <span class="highlight">confidentialité totale</span> vis-à-vis des clients du Partenaire (marque blanche)</li>
+                <li>Opérer de manière <span class="highlight">totalement anonyme</span> en s'effaçant complètement derrière l'identité du Partenaire</li>
+            </ul>
+            
+            <h3>2.2 Engagement du Partenaire</h3>
+            <p>Le Partenaire s'engage à :</p>
+            <ul>
+                <li>Prospecter et gérer la relation avec ses clients</li>
+                <li>Transmettre au Prestataire les spécifications complètes des projets</li>
+                <li>Servir d'intermédiaire unique entre le Prestataire et ses clients</li>
+                <li>Informer ses clients des frais d'hébergement applicables</li>
+                <li>Respecter les conditions de confidentialité du présent Contrat</li>
+            </ul>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <h2>Article 3 : Tarification et Conditions Financières</h2>
+        <div class="contract-section">
+            <h3>3.1 Rémunération du Partenaire</h3>
+            <p>Le Partenaire conserve <span class="highlight">100% des montants</span> qu'il facture à ses clients pour la création des sites web. Le Prestataire ne prend aucune commission sur ces montants.</p>
+            
+            <h3>3.2 Frais d'hébergement</h3>
+            <p>Le seul revenu du Prestataire provient des frais d'hébergement mensuels, facturés directement aux clients finaux selon la grille tarifaire suivante :</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type de site</th>
+                        <th>Tarif mensuel</th>
+                        <th>Services inclus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Site vitrine basic</td>
+                        <td><span class="highlight">6.99€/mois</span></td>
+                        <td rowspan="3">
+                            - Hébergement haute performance<br>
+                            - Optimisation SEO personnalisée (score 95/100)<br>
+                            - Mises à jour de sécurité<br>
+                            - Support technique
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Site vitrine avec design custom</td>
+                        <td><span class="highlight">14.99€/mois</span></td>
+                    </tr>
+                    <tr>
+                        <td>Site e-commerce (design custom)</td>
+                        <td><span class="highlight">22.99€/mois</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>3.3 Services de maintenance optionnels</h3>
+            <p>Des services de maintenance peuvent être proposés en option aux tarifs suivants :</p>
+            <ul>
+                <li><span class="highlight">10€/mois</span> pour les sites vitrine</li>
+                <li><span class="highlight">20€/mois</span> pour les sites e-commerce</li>
+            </ul>
+            <p>Le Partenaire peut appliquer la marge qu'il souhaite sur ces services de maintenance.</p>
+            
+            <h3>3.4 Facturation</h3>
+            <p>Les frais d'hébergement sont facturés directement par le Prestataire aux clients finaux, sur une base mensuelle.</p>
+            
+            <h4 style="font-size: 13px; margin-top: 20px; margin-bottom: 10px; color: var(--dark-blue);">3.5 Transparence et confidentialité</h4>
+            <p>Tous les échanges et transactions liés aux frais d'hébergement et de maintenance se feront dans le plus grand respect de la <span class="highlight">confidentialité du partenariat</span>. Les modalités de facturation et de communication avec le client final seront conçues pour préserver l'anonymat du Prestataire, garantissant ainsi la relation exclusive entre le Partenaire et son client.</p>
+        </div>
+        
+        <h2>Article 4 : Processus de Collaboration</h2>
+        <div class="contract-section">
+            <ol>
+                <li><span class="highlight">Signature du contrat</span> : Formalisation du partenariat entre les parties et engagement de confidentialité mutuelle</li>
+                <li><span class="highlight">Prospection</span> : Le Partenaire prospecte et contractualise avec ses clients</li>
+                <li><span class="highlight">Transmission des spécifications</span> : Le Partenaire fournit au Prestataire les informations nécessaires au développement</li>
+                <li><span class="highlight">Développement</span> : Le Prestataire réalise le site conformément aux spécifications, en restant totalement invisible pour le client final</li>
+                <li><span class="highlight">Validation</span> : Le site est présenté au Partenaire pour validation avant livraison au client final</li>
+                <li><span class="highlight">Mise en ligne</span> : Le site est déployé sur l'infrastructure d'hébergement du Prestataire, sans aucune mention de son intervention</li>
+                <li><span class="highlight">Maintenance</span> : Services optionnels de maintenance proposés au client final</li>
+            </ol>
+        </div>
+        
+        <h2>Article 5 : Confidentialité</h2>
+        <div class="contract-section blue-bg">
+            <p>Les parties s'engagent à respecter la plus stricte confidentialité concernant le contenu du présent Contrat. Le Prestataire s'engage à <span class="highlight">ne jamais entrer en contact direct</span> avec les clients du Partenaire et à <span class="highlight">ne pas divulguer son implication</span> dans la réalisation des sites web.</p>
+            <p>Tous les sites sont livrés en <span class="highlight">marque blanche</span>, sans mention du Prestataire. Toute référence, signature de code, commentaire ou métadonnée pouvant révéler l'identité du Prestataire sera soigneusement supprimée des livrables.</p>
+            <p>Le Partenaire s'engage à présenter les services comme étant les siens, sans aucune obligation de mentionner l'existence du Prestataire. Cette garantie d'<span class="highlight">anonymat complet</span> constitue un élément essentiel du présent Contrat, permettant au Partenaire de consolider sa relation avec ses clients sans intermédiaire visible.</p>
+        </div>
+        
+        <h2>Article 6 : Durée et Résiliation</h2>
+        <div class="contract-section">
+            <p>Le présent Contrat est conclu pour une durée indéterminée à compter de sa signature.</p>
+            
+            <h3>6.1 Résiliation par le Partenaire</h3>
+            <p>Le Partenaire peut mettre fin au présent Contrat <span class="highlight">à tout moment</span> et <span class="highlight">sans préavis</span>, par simple notification écrite adressée au Prestataire. Cette flexibilité totale est offerte au Partenaire pour garantir sa liberté d'action commerciale.</p>
+            
+            <h3>6.2 Résiliation par le Prestataire</h3>
+            <p>Le Prestataire s'engage à respecter un <span class="highlight">préavis de 3 mois</span> en cas de résiliation de sa part, notifié par lettre recommandée avec accusé de réception. Cette garantie assure au Partenaire une continuité de service et le temps nécessaire pour réorganiser ses activités.</p>
+            
+            <h3>6.3 Gestion des projets en cours</h3>
+            <p>En cas de résiliation par l'une ou l'autre des parties, les projets en cours seront menés à terme selon les conditions du présent Contrat, garantissant ainsi la qualité de service aux clients finaux.</p>
+        </div>
+        
+        <div class="signature-section">
+            <div class="signature-box">
+                <p class="signature-title">Pour le Prestataire :</p>
+                <p>Société : <span class="highlight">Tobi Studio</span></p>
+                <p>Nom, prénom : ............................................</p>
+                <p>Fonction : ............................................</p>
+                <p>Date : ............................................</p>
+                <p>Signature : ............................................</p>
+            </div>
+            
+            <div class="signature-box">
+                <p class="signature-title">Pour le Partenaire :</p>
+                <p>Société : ............................................</p>
+                <p>Nom, prénom : ............................................</p>
+                <p>Fonction : ............................................</p>
+                <p>Date : ............................................</p>
+                <p>Signature : ............................................</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Tobi Studio - Contrat de Partenariat Agences Web - Page 2/2</p>
+        </div>
+    </div>
+    
+    <script>
+        // Formatage de la date pour la référence du contrat
+        const today = new Date();
+        const formattedDate = today.getFullYear() + 
+                            String(today.getMonth() + 1).padStart(2, '0') + 
+                            String(today.getDate()).padStart(2, '0');
+        document.getElementById('current-date').textContent = formattedDate;
+    </script>
+</body>
+</html> 
