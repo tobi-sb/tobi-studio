@@ -31,6 +31,50 @@
                 -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                 transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
             }
+
+            html.w-mod-js:not(.w-mod-ix) [data-w-id="d2c52af1-56bc-2027-f884-254fc00663f3"] {
+                display: none;
+                -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+            }
+        }
+        
+        /* Personnalisation du padding de la navbar */
+        .navbar-inner {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+        
+        /* Uniformisation de l'espacement des liens de navigation */
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-menu .navbar-menu-item-link,
+        .navbar-menu .navbar-menu-item-link-copy {
+            margin-right: 20px !important;
+        }
+        
+        .navbar-menu .navbar-menu-item-link:last-child,
+        .navbar-menu .navbar-menu-item-link-copy:last-child {
+            margin-right: 0 !important;
+        }
+        
+        /* Suppression des liens vides */
+        .navbar-menu .navbar-menu-item-link:empty,
+        .navbar-menu .navbar-menu-item-link .navbar-menu-item-inner:empty,
+        .navbar-menu .navbar-menu-item-link:not(:has(.text-block)) {
+            display: none !important;
+        }
+        
+        /* Correction de la structure de navigation imbriquée */
+        .navbar-menu .navbar-menu {
+            display: inline-flex;
+            padding: 0;
+            margin: 0;
         }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -118,7 +162,6 @@
                 body {
                     -webkit-font-smoothing: antialiased;
                     -moz-osx-font-smoothing: grayscale;
-                    font-smoothing: antialiased;
                     text-rendering: optimizeLegibility;
                 }
 
@@ -168,111 +211,92 @@
         <main class="main-wrapper">
             <header class="header">
                 <div class="navbar">
-                    <div class="page-padding-copy">
-                        <header class="navbar-inner">
-                            <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fd7-0e531fd2" class="navbar-left">
-                                <div class="navbar-logo">
-                                    <a href="index.html" aria-current="page" class="w-inline-block w--current"><img
-                                            src="images/logo-rond-2.webp" loading="eager" width="86" alt=""
-                                            class="navbar-logo-image"></a>
-                                </div>
-                            </div>
-                            <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fdb-0e531fd2" class="navbar-right">
-                                <nav class="navbar-menu">
-                                    <a href="index.html" aria-current="page"
-                                        class="navbar-menu-item-link w-inline-block w--current">
-                                        <div class="navbar-menu-item-inner">
-                                            <div class="navbar-menu-item-line"></div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="navbar-menu-item-link w-inline-block">
-                                        <div class="navbar-menu-item-inner">
-                                            <div class="navbar-menu-item-line"></div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="navbar-menu-item-link w-inline-block">
-                                        <div class="navbar-menu-item-inner">
-                                            <div class="navbar-menu-item-line"></div>
-                                        </div>
-                                    </a>
-                                    <nav class="navbar-menu">
-                                        <a href="index.html" aria-current="page"
-                                            class="navbar-menu-item-link w-inline-block w--current">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="index.html" aria-current="page"
-                                            class="navbar-menu-item-link w-inline-block w--current">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="text-block">Accueil</div>
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="nos-creation.html" aria-current="page"
-                                            data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
-                                            class="navbar-menu-item-link-copy navbar-menu-item-link navbar-menu-item-link w-inline-block w--current">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="text-block">Nos creations</div>
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="navbar-menu-item-link w-inline-block">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="navbar-menu-item-link w-inline-block">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                    </nav>
-                                </nav>
-                                <div class="navbar-right-button">
-                                    <a href="contact.html" class="button secondary w-inline-block">
-                                        <div class="button-inner">
-                                            <div class="button-inner-text">contactez-nous</div>
-                                            <div class="button-line-right"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div data-w-id="a26b06a4-2c02-bc86-9274-74360e531fee" class="mobile-menu-toggle">
-                                    <div class="mobile-menu-toggle-line _01"></div>
-                                    <div class="mobile-menu-toggle-line _02"></div>
-                                    <div class="mobile-menu-toggle-line _03"></div>
-                                </div>
-                            </div>
-                        </header>
-                    </div>
-                </div>
-                <div class="mobile-menu">
-                    <div class="page-padding">
-                        <div class="container-xxlarge">
-                            <div class="mobile-menu-wrapper">
-                                <div class="mobile-menu-nav">
-                                    <a href="index.html" aria-current="page"
-                                        class="mobile-menu-nav-link w-inline-block w--current">
-                                        <div class="mobile-menu-nav-text">Accueil</div>
-                                    </a>
-                                    <a href="nos-creation.html" class="mobile-menu-nav-link w-inline-block">
-                                        <div class="mobile-menu-nav-text">Nos créations</div>
-                                    </a>
-                                    <a href="contact.html" class="mobile-menu-nav-link w-inline-block">
-                                        <div class="mobile-menu-nav-text">COntact</div>
-                                    </a>
-                                    <a href="contact.html" class="button secondary w-inline-block">
-                                        <div class="button-inner">
-                                            <div class="button-inner-text">contactez-nous</div>
-                                            <div class="button-line-right"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                  <div class="page-padding-copy">
+                    <header class="navbar-inner">
+                      <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fd7-0e531fd2" class="navbar-left">
+                        <div class="navbar-logo">
+                          <a href="index.html" class="w-inline-block"><img
+                              src="images/logo-rond-2.webp" loading="eager" width="86" alt="" class="navbar-logo-image"></a>
                         </div>
-                    </div>
-                </div>
-            </header>
+                      </div>
+                      <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fdb-0e531fd2" class="navbar-right">
+                        <nav class="navbar-menu">
+                          <a href="index.html" class="navbar-menu-item-link w-inline-block">
+                            <div class="navbar-menu-item-inner">
+                              <div class="navbar-menu-item-line"></div>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar-menu-item-link w-inline-block">
+                            <div class="navbar-menu-item-inner">
+                              <div class="navbar-menu-item-line"></div>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar-menu-item-link w-inline-block">
+                            <div class="navbar-menu-item-inner">
+                              <div class="navbar-menu-item-line"></div>
+                            </div>
+                          </a>
+                          <nav class="navbar-menu">
+                            <a href="index.html" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="index.html" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Accueil</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            
+                            <a href="site-gratuit.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
+                              class="navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Site web gratuit</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="partenariat.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
+                              class="right0 navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Partenariat Agences</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="nos-creation.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
+                              class="navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Nos creations</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="#" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="#" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                          </nav>
+                        </nav>
+                        <div class="navbar-right-button">
+                          <a href="contact.html" class="button secondary w-inline-block" style="background-color: #007bff; border-color: #007bff;">
+                            <div class="button-inner">
+                              <div class="button-inner-text">contactez-nous</div>
+                              <div class="button-line-right"></div>
+                            </div>
+                          </a>
+                        </div>
+                        <div data-w-id="a26b06a4-2c02-bc86-9274-74360e531fee" class="mobile-menu-toggle">
+                          <div class="mobile-menu-toggle-line _01"></div>
+                          <div class="mobile-menu-toggle-line _02"></div>
+                          <div class="mobile-menu-toggle-line _03"></div>
+                        </div>
+                      </div>
+                    </header>
             <section class="section-project-hero">
                 <div class="page-padding">
                     <div class="container-xlarge">
@@ -379,6 +403,10 @@
                             <section class="section-marquee-secondary">
                                 <div class="marquee-secondary-inner"
                                     style="transform: translate3d(20.666%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
+                                    <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
+                                    <div class="marquee-secondary-text">·</div>
+                                    <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
+                                    <div class="marquee-secondary-text">·</div>
                                     <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
                                     <div class="marquee-secondary-text">·</div>
                                     <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
@@ -674,10 +702,12 @@
                         <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
                         <div class="marquee-secondary-text">·</div>
                         <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
+                        <div class="marquee-secondary-text">·</div>
+                        <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
                     </div>
                 </section>
                 <div class="page-padding">
-                    <div class="padding-vertical padding-xhuge">
+                    <div class="padding-vertical padding-xhuge" style="padding-bottom: 4rem;">
                         <div class="text-align-center">
                             <div class="margin-bottom margin-small">
                                 <div class="clip"><img
@@ -813,6 +843,7 @@
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
     <script src="js/webflow.js" type="text/javascript"></script>
+    <script src="js/nav-fix.js" type="text/javascript"></script>
 
 </body>
 

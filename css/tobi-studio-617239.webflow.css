@@ -174,8 +174,8 @@ figcaption {
 
 .page-padding {
   padding-top: 4em;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .main-wrapper {
@@ -1406,7 +1406,6 @@ figcaption {
 
 .max-width-medium {
   width: 100%;
-  max-width: 30rem;
 }
 
 .container-small {
@@ -1481,14 +1480,14 @@ figcaption {
 }
 
 .navbar-menu {
-  z-index: 9999;
+  
   justify-content: flex-end;
   align-items: center;
   display: flex;
 }
 
 .navbar-inner {
-  z-index: 2;
+  z-index: 999999999;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   grid-template-rows: auto;
@@ -1496,7 +1495,8 @@ figcaption {
   grid-auto-columns: 1fr;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: grid;
 }
 
@@ -2391,9 +2391,9 @@ figcaption {
 }
 
 .page-padding-copy {
-  padding-top: 4em;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .navbar-menu-item-link-copy {
@@ -2526,8 +2526,8 @@ figcaption {
 
 .page-padding-copy {
   padding-top: 0;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media screen and (min-width: 1920px) {
@@ -2545,8 +2545,8 @@ figcaption {
   .page-padding {
     width: 100%;
     padding-top: 0;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .utility-component {
@@ -2908,7 +2908,6 @@ figcaption {
   .home-services-grid-right-inner {
     margin-top: -1.5rem;
   }
-
   .home-clients-grid {
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
@@ -3126,8 +3125,8 @@ figcaption {
   .page-padding-copy {
     width: 100%;
     padding-top: 0;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -3149,8 +3148,8 @@ figcaption {
   }
 
   .page-padding {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .padding-medium {
@@ -3582,6 +3581,8 @@ figcaption {
   .page-padding {
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .utility-component {
@@ -3744,11 +3745,11 @@ figcaption {
   }
 
   .heading-xlarge {
-    font-size: 4rem;
+    font-size:0;
   }
 
   .heading-h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
 
   .section-styleguide {
@@ -3930,6 +3931,16 @@ figcaption {
     padding-top: 1em;
     padding-bottom: 1em;
   }
+
+  .margin-medium {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .heading-h1 {
+    font-size: 2.5rem !important;
+  }
 }
 
 #w-node-_5cbea69e-73fa-1ac2-1626-da44c9d7907d-e0f9cc36,
@@ -4041,4 +4052,13 @@ figcaption {
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+}
+
+.select-icon {
+  padding-right: 12px; /* Adjust as needed */
+}
+
+select {
+  background-position: right 12px center; /* Adjust as needed */
+  padding-right: 32px; /* Make room for the icon */
 }

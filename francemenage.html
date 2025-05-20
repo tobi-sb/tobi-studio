@@ -107,6 +107,21 @@
             background: none !important;
         }
     </style>
+    <style>
+        @media screen and (max-width: 480px) {
+            .section-cta-contact .padding-vertical.padding-xhuge {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            .footer .padding-vertical.padding-huge {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            .footer .padding-bottom.padding-large {
+                padding-bottom: 0.3rem !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="body">
@@ -178,115 +193,131 @@
                     object-fit: cover;
                     transition: transform 0.3s ease;
                 }
+                /* Personnalisation du padding de la navbar */
+    .navbar-inner {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    /* Uniformisation de l'espacement des liens de navigation */
+    .navbar-menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-menu .navbar-menu-item-link,
+    .navbar-menu .navbar-menu-item-link-copy {
+      margin-right: 20px !important;
+    }
+
+    .navbar-menu .navbar-menu-item-link:last-child,
+    .navbar-menu .navbar-menu-item-link-copy:last-child {
+      margin-right: 0 !important;
+    }
+
+    /* Suppression des liens vides */
+    .navbar-menu .navbar-menu-item-link:empty,
+    .navbar-menu .navbar-menu-item-link .navbar-menu-item-inner:empty,
+    .navbar-menu .navbar-menu-item-link:not(:has(.text-block)) {
+      display: none !important;
+    }
+
+    /* Correction de la structure de navigation imbriquée */
+    .navbar-menu .navbar-menu {
+      display: inline-flex;
+      padding: 0;
+      margin: 0;
+    }
             </style>
         </div>
         <main class="main-wrapper">
             <header class="header">
                 <div class="navbar">
-                    <div class="page-padding-copy">
-                        <header class="navbar-inner">
-                            <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fd7-0e531fd2" class="navbar-left">
-                                <div class="navbar-logo">
-                                    <a href="index.html" aria-current="page" class="w-inline-block w--current"><img
-                                            src="images/logo-rond-2.webp" loading="eager" width="86" alt=""
-                                            class="navbar-logo-image"></a>
-                                </div>
-                            </div>
-                            <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fdb-0e531fd2" class="navbar-right">
-                                <nav class="navbar-menu">
-                                    <a href="index.html" aria-current="page"
-                                        class="navbar-menu-item-link w-inline-block w--current">
-                                        <div class="navbar-menu-item-inner">
-                                            <div class="navbar-menu-item-line"></div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="navbar-menu-item-link w-inline-block">
-                                        <div class="navbar-menu-item-inner">
-                                            <div class="navbar-menu-item-line"></div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="navbar-menu-item-link w-inline-block">
-                                        <div class="navbar-menu-item-inner">
-                                            <div class="navbar-menu-item-line"></div>
-                                        </div>
-                                    </a>
-                                    <nav class="navbar-menu">
-                                        <a href="index.html" aria-current="page"
-                                            class="navbar-menu-item-link w-inline-block w--current">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="index.html" aria-current="page"
-                                            class="navbar-menu-item-link w-inline-block w--current">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="text-block">Accueil</div>
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="nos-creation.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
-                                            class="navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="text-block">Nos creations</div>
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="navbar-menu-item-link w-inline-block">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                        <a href="#" class="navbar-menu-item-link w-inline-block">
-                                            <div class="navbar-menu-item-inner">
-                                                <div class="navbar-menu-item-line"></div>
-                                            </div>
-                                        </a>
-                                    </nav>
-                                </nav>
-                                <div class="navbar-right-button">
-                                    <a href="contact.html" class="button secondary w-inline-block">
-                                        <div class="button-inner">
-                                            <div class="button-inner-text">contactez-nous</div>
-                                            <div class="button-line-right"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div data-w-id="a26b06a4-2c02-bc86-9274-74360e531fee" class="mobile-menu-toggle">
-                                    <div class="mobile-menu-toggle-line _01"></div>
-                                    <div class="mobile-menu-toggle-line _02"></div>
-                                    <div class="mobile-menu-toggle-line _03"></div>
-                                </div>
-                            </div>
-                        </header>
-                    </div>
-                </div>
-                <div class="mobile-menu">
-                    <div class="page-padding">
-                        <div class="container-xxlarge">
-                            <div class="mobile-menu-wrapper">
-                                <div class="mobile-menu-nav">
-                                    <a href="index.html" aria-current="page"
-                                        class="mobile-menu-nav-link w-inline-block w--current">
-                                        <div class="mobile-menu-nav-text">Accueil</div>
-                                    </a>
-                                    <a href="nos-creation.html" class="mobile-menu-nav-link w-inline-block">
-                                        <div class="mobile-menu-nav-text">Nos créations</div>
-                                    </a>
-                                    <a href="contact.html" class="mobile-menu-nav-link w-inline-block">
-                                        <div class="mobile-menu-nav-text">COntact</div>
-                                    </a>
-                                    <a href="contact.html" class="button secondary w-inline-block">
-                                        <div class="button-inner">
-                                            <div class="button-inner-text">contactez-nous</div>
-                                            <div class="button-line-right"></div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                  <header class="navbar-inner" style="margin-left: 3rem; margin-right: 3rem;">
+                      <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fd7-0e531fd2" class="navbar-left">
+                        <div class="navbar-logo">
+                          <a href="index.html" class="w-inline-block"><img
+                              src="images/logo-rond-2.webp" loading="eager" width="86" alt="" class="navbar-logo-image"></a>
                         </div>
-                    </div>
-                </div>
-            </header>
+                      </div>
+                      <div id="w-node-a26b06a4-2c02-bc86-9274-74360e531fdb-0e531fd2" class="navbar-right">
+                        <nav class="navbar-menu">
+                          <a href="index.html" class="navbar-menu-item-link w-inline-block">
+                            <div class="navbar-menu-item-inner">
+                              <div class="navbar-menu-item-line"></div>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar-menu-item-link w-inline-block">
+                            <div class="navbar-menu-item-inner">
+                              <div class="navbar-menu-item-line"></div>
+                            </div>
+                          </a>
+                          <a href="#" class="navbar-menu-item-link w-inline-block">
+                            <div class="navbar-menu-item-inner">
+                              <div class="navbar-menu-item-line"></div>
+                            </div>
+                          </a>
+                          <nav class="navbar-menu">
+                            <a href="index.html" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="index.html" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Accueil</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            
+                            <a href="site-gratuit.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
+                              class="navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Site web gratuit</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="partenariat.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
+                              class="right0 navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Partenariat Agences</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="nos-creation.html" data-w-id="ff11d787-f2dc-2191-dc2b-fd219a3331bc"
+                              class="navbar-menu-item-link-copy navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="text-block">Nos creations</div>
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="#" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                            <a href="#" class="navbar-menu-item-link w-inline-block">
+                              <div class="navbar-menu-item-inner">
+                                <div class="navbar-menu-item-line"></div>
+                              </div>
+                            </a>
+                          </nav>
+                        </nav>
+                        <div class="navbar-right-button">
+                          <a href="contact.html" class="button secondary w-inline-block" style="background-color: #007bff; border-color: #007bff;">
+                            <div class="button-inner">
+                              <div class="button-inner-text">contactez-nous</div>
+                              <div class="button-line-right"></div>
+                            </div>
+                          </a>
+                        </div>
+                        <div data-w-id="a26b06a4-2c02-bc86-9274-74360e531fee" class="mobile-menu-toggle">
+                          <div class="mobile-menu-toggle-line _01"></div>
+                          <div class="mobile-menu-toggle-line _02"></div>
+                          <div class="mobile-menu-toggle-line _03"></div>
+                        </div>
+                      </div>
+                    </header>
             <section class="section-project-hero">
                 <div class="page-padding">
                     <div class="container-xlarge">
@@ -339,7 +370,7 @@
                                         <div class="clip">
                                             <div data-w-id="cea76153-5f6a-6a07-c612-f5a9a46782d0"
                                                 style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
-                                                class="heading-h4 text-uppercase">7 semaines</div>
+                                                class="heading-h4 text-uppercase">3 semaines</div>
                                         </div>
                                     </div>
                                     <div id="w-node-a291b8c7-42a7-2d63-fd0d-6c52699e840f-e0f9cc3e">
@@ -382,9 +413,9 @@
                                             <div class="line" style="width: 100%; height: 2px;"></div>
                                         </div>
                                         <div class="clip"><a href="https://www.francemenagepro.fr/"
-                                                class="w-inline-block">
+                                                class="w-inline-block" target="_blank" rel="noopener">
                                                 <div data-w-id="04e86fa5-c55e-0c0f-5f4a-aa9504da68a7"
-                                                    style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;"
+                                                    style="transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d; text-decoration: underline; color: #1E63EE;"
                                                     class="heading-h4 text-uppercase">francemenagepro.fr</div>
                                             </a></div>
                                     </div>
@@ -395,12 +426,6 @@
                             <section class="section-marquee-secondary">
                                 <div class="marquee-secondary-inner"
                                     style="transform: translate3d(-78.292%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
-                                    <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
-                                    <div class="marquee-secondary-text">·</div>
-                                    <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
-                                    <div class="marquee-secondary-text">·</div>
-                                    <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
-                                    <div class="marquee-secondary-text">·</div>
                                     <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
                                     <div class="marquee-secondary-text">·</div>
                                     <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
@@ -470,12 +495,7 @@
                                                     </div>
                                                     <div class="text-size-medium">
                                                         <div class="text-rich-text w-richtext">
-                                                            <p>L'industrie hôtelière est hautement concurrentielle, et
-                                                                notre client faisait face au défi de se distinguer dans
-                                                                un marché où le choix des hébergements est vaste. De
-                                                                plus, la satisfaction des clients joue un rôle clé, et
-                                                                il était essentiel de maintenir des taux d'occupation
-                                                                élevés tout au long de l'année.</p>
+                                                            <p>Le secteur du nettoyage professionnel en France est très concurrentiel, avec de nombreux acteurs allant des grandes entreprises aux indépendants. France Ménage faisait face au défi de se démarquer dans cette industrie saturée, où les clients recherchent fiabilité, qualité et transparence. L'entreprise devait également faire face aux difficultés de recrutement de personnel qualifié et fidèle, et à la nécessité de gérer efficacement les plannings d'intervention sur de multiples sites.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -495,12 +515,7 @@
                                                     </div>
                                                     <div class="text-size-medium">
                                                         <div class="text-rich-text w-richtext">
-                                                            <p>L'objectif principal était de créer une présence en ligne
-                                                                attrayante qui reflète le charme de l'hôtel et mette en
-                                                                avant les expériences uniques qu'il offre. Le client
-                                                                cherchait à améliorer les réservations en ligne, à
-                                                                renforcer la notoriété de sa marque et à fidéliser les
-                                                                clients pour des séjours récurrents.</p>
+                                                            <p>L'objectif principal était de créer une présence en ligne professionnelle qui reflète la qualité et le sérieux des services de nettoyage proposés par France Ménage. Le client souhaitait attirer davantage de contrats d'entreprises et institutionnels en mettant en avant son expertise dans différents types d'espaces (bureaux, commerces, copropriétés, etc.). Il était également essentiel de faciliter la demande de devis et le contact initial, tout en valorisant les engagements écoresponsables et la formation du personnel de l'entreprise.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -520,17 +535,7 @@
                                                     </div>
                                                     <div class="text-size-medium">
                                                         <div class="text-rich-text w-richtext">
-                                                            <p>Pour relever ces défis, nous avons travaillé sur un site
-                                                                web qui capturait l'essence de l'hôtel, mettant en avant
-                                                                ses chambres luxueuses, ses installations, et son
-                                                                environnement exceptionnel. Nous avons intégré un
-                                                                système de réservation en ligne convivial qui permettait
-                                                                aux clients de réserver facilement leur séjour. En
-                                                                outre, nous avons lancé une stratégie de marketing
-                                                                numérique pour attirer de nouveaux clients et fidéliser
-                                                                les clients existants. Ces efforts ont permis à l'hôtel
-                                                                d'augmenter ses taux d'occupation et de renforcer sa
-                                                                réputation dans l'industrie.</p>
+                                                            <p>Nous avons développé un site web professionnel et fonctionnel qui met en avant les différents services de nettoyage proposés par France Ménage. Le site présente clairement les prestations par type de lieu (bureaux, commerces, établissements scolaires, copropriétés...) et détaille les protocoles de nettoyage spécifiques à chaque environnement. Une section dédiée explique la démarche qualité de l'entreprise, ses certifications et ses engagements écologiques avec l'utilisation de produits respectueux de l'environnement. Un formulaire de demande de devis optimisé et un système de prise de rendez-vous en ligne ont été intégrés pour faciliter la conversion des visiteurs en clients. Le site comprend également une zone client sécurisée permettant aux clients existants de suivre leurs prestations et de communiquer avec leurs interlocuteurs dédiés. Ces améliorations ont permis à France Ménage d'augmenter significativement son taux de conversion et d'obtenir davantage de contrats professionnels à forte valeur ajoutée.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -603,18 +608,19 @@
                         <div class="project-pagination-grid">
                             <div id="w-node-be53a79d-69a3-0c7f-ec78-3e012f84617f-e0f9cc3e"
                                 class="project-pagination-previous"><a
-                                    id="w-node-be53a79d-69a3-0c7f-ec78-3e012f846180-e0f9cc3e" href="lemonade.html"
+                                    id="w-node-be53a79d-69a3-0c7f-ec78-3e012f846180-e0f9cc3e"
+                                    href="latable.html"
                                     class="project-pagination-previous-image-wrapper w-inline-block"><img
                                         data-w-id="be53a79d-69a3-0c7f-ec78-3e012f846181" loading="lazy" width="80"
-                                        src="https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9ccd2_lemonade%202.png"
-                                        alt="Lemonade" sizes="(max-width: 479px) 100vw, 60px"
-                                        srcset="https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9ccd2_lemonade%25202-p-500.png 500w, https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9ccd2_lemonade%25202-p-800.png 800w, https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9ccd2_lemonade%202.png 1530w"
+                                        src="./images/latable.png"
+                                        alt="La Table D'Alyce" sizes="(max-width: 479px) 100vw, 60px"
                                         class="project-pagination-previous-image"
                                         style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></a>
                                 <div class="project-pagination-previous-content">
-                                    <div class="text-meta text-color-muted">Précédent</div><a href="lemonade.html"
+                                    <div class="text-meta text-color-muted">Précédent</div><a
+                                        href="latable.html"
                                         class="project-pagination-previous-link w-inline-block">
-                                        <div class="heading-h5 text-uppercase">Lemonade</div>
+                                        <div class="heading-h5 text-uppercase">La Table D'Alyce</div>
                                     </a>
                                 </div>
                             </div>
@@ -628,17 +634,16 @@
                             <div id="w-node-be53a79d-69a3-0c7f-ec78-3e012f84618d-e0f9cc3e"
                                 class="project-pagination-next">
                                 <div class="project-pagination-next-content">
-                                    <div class="text-meta text-color-muted">Suivant</div><a href="vision-branding.html"
+                                    <div class="text-meta text-color-muted">Suivant</div><a href="currystreet.html"
                                         class="project-pagination-next-link w-inline-block">
-                                        <div class="heading-h5 text-uppercase">GCGme</div>
+                                        <div class="heading-h5 text-uppercase">Curry Street</div>
                                     </a>
                                 </div><a id="w-node-be53a79d-69a3-0c7f-ec78-3e012f846195-e0f9cc3e"
-                                    href="vision-branding.html"
+                                    href="currystreet.html"
                                     class="project-pagination-next-image-wrapper w-inline-block"><img
                                         data-w-id="be53a79d-69a3-0c7f-ec78-3e012f846196" loading="lazy" width="80"
-                                        src="https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9cc6a_d9ba3a80-98b5-40b1-a51d-a20d3acbc596.png"
-                                        alt="GCGme" sizes="(max-width: 479px) 100vw, 60px"
-                                        srcset="https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9cc6a_girl%2520fashion-p-500.png 500w, https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9cc6a_girl%2520fashion-p-800.png 800w, https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9cc6a_girl%2520fashion-p-1080.png 1080w, https://assets-global.website-files.com/654e817f66acebd2e0f9cc67/654e817f66acebd2e0f9cc6a_d9ba3a80-98b5-40b1-a51d-a20d3acbc596.png 1525w"
+                                        src="./images/currystreet.png"
+                                        alt="Curry Street" sizes="(max-width: 479px) 100vw, 60px"
                                         class="project-pagination-next-image"
                                         style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></a>
                             </div>
@@ -671,16 +676,10 @@
                         <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
                         <div class="marquee-secondary-text">·</div>
                         <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
-                        <div class="marquee-secondary-text">·</div>
-                        <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
-                        <div class="marquee-secondary-text">·</div>
-                        <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
-                        <div class="marquee-secondary-text">·</div>
-                        <div class="marquee-secondary-text">TRAVAILLONS ENSEMBLE</div>
                     </div>
                 </section>
                 <div class="page-padding">
-                    <div class="padding-vertical padding-xhuge">
+                    <div class="padding-vertical padding-xhuge" style="padding-bottom: 4rem;">
                         <div class="text-align-center">
                             <div class="margin-bottom margin-small">
                                 <div class="clip"><img
@@ -718,93 +717,95 @@
             </section>
             <div class="footer">
                 <div class="page-padding">
-                    <div class="container-xlarge">
-                        <div class="padding-vertical padding-huge">
-                            <div class="footer-grid">
-                                <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d59-3fc48d54" class="footer-grid-left">
-                                    <a href="index.html" aria-current="page" class="w-inline-block w--current"><img
-                                            src="images/logopng.webp" loading="lazy" width="137" alt=""
-                                            class="logo"></a>
-                                </div>
-                                <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d5c-3fc48d54"
-                                    class="footer-grid-right">
-                                    <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d5d-3fc48d54"
-                                        class="footer-grid-right-inner">
-                                        <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d5e-3fc48d54"
-                                            class="footer-column">
-                                            <div class="margin-bottom margin-medium">
-                                                <h3 class="heading-h6 text-uppercase under">Pages</h3>
-                                            </div>
-                                            <div class="nav-under">
-                                                <a href="index.html" aria-current="page"
-                                                    class="nav-item-copy inverse w-inline-block w--current">
-                                                    <div class="nav-item-text">Accueil</div>
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                                <a href="nos-creation.html"
-                                                    class="nav-item-copy inverse w-inline-block">
-                                                    <div class="nav-item-text">Nos créationS</div>
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                                <a href="https://solveig-template.webflow.io/projects/vision-branding"
-                                                    class="nav-item inverse w-inline-block">
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                                <div class="margin-top margin-small">
-                                                    <a href="contact.html" class="button secondary w-inline-block">
-                                                        <div class="button-inner">
-                                                            <div class="button-inner-text">contactez-nous</div>
-                                                            <div class="button-line-right"></div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d75-3fc48d54"
-                                            class="footer-column">
-                                            <div class="margin-bottom margin-medium">
-                                                <h3 class="heading-h6 text-uppercase under">Pages utile</h3>
-                                            </div>
-                                            <div class="nav-under">
-                                                <a href="#" class="nav-item inverse w-inline-block">
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                                <a href="#" class="nav-item inverse w-inline-block">
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                                <a href="#" class="nav-item-copy inverse w-inline-block">
-                                                    <div class="nav-item-text">Styleguide</div>
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                                <a href="#" class="nav-item-copy inverse w-inline-block">
-                                                    <div class="nav-item-text">Licences</div>
-                                                    <div class="nav-item-line inverse"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                  <div class="container-xlarge">
+                    <div class="padding-vertical padding-huge">
+                      <div class="footer-grid">
+                        <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d59-3fc48d54" class="footer-grid-left">
+                          <a href="index.html" aria-current="page" class="w-inline-block w--current"><img
+                              src="images/logopng.webp" loading="lazy" width="137" alt="" class="logo"></a>
                         </div>
+                        <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d5c-3fc48d54" class="footer-grid-right">
+                          <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d5d-3fc48d54" class="footer-grid-right-inner">
+                            <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d5e-3fc48d54" class="footer-column">
+                              <div class="margin-bottom margin-medium">
+                                <h3 class="heading-h6 text-uppercase under">Pages</h3>
+                              </div>
+                              <div class="nav-under">
+                                <a href="index.html" aria-current="page"
+                                  class="nav-item-copy inverse w-inline-block w--current">
+                                  <div class="nav-item-text">Accueil</div>
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="site-gratuit.html" class="nav-item-copy inverse w-inline-block">
+                                  <div class="nav-item-text">Site web gratuit</div>
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="partenariat.html" class="nav-item-copy inverse w-inline-block">
+                                  <div class="nav-item-text">Partenariat agences</div>
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="nos-creation.html" class="nav-item-copy inverse w-inline-block">
+                                  <div class="nav-item-text">Nos créations</div>
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="https://solveig-template.webflow.io/projects/vision-branding"
+                                  class="nav-item inverse w-inline-block">
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <div class="margin-top margin-small">
+                                  <a href="contact.html" class="button secondary w-inline-block">
+                                    <div class="button-inner">
+                                      <div class="button-inner-text">contactez-nous</div>
+                                      <div class="button-line-right"></div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="w-node-d9c9ab67-8e86-f109-6dc0-dc7d3fc48d75-3fc48d54" class="footer-column">
+                              <div class="margin-bottom margin-medium">
+                                <h3 class="heading-h6 text-uppercase under">Pages utile</h3>
+                              </div>
+                              <div class="nav-under">
+                                <a href="#" class="nav-item inverse w-inline-block">
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="#" class="nav-item inverse w-inline-block">
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="mentions-legales.html" class="nav-item-copy inverse w-inline-block">
+                                  <div class="nav-item-text">Mentions légales</div>
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                                <a href="politique-de-confidentialite.html" class="nav-item-copy inverse w-inline-block">
+                                  <div class="nav-item-text">Politique de confidentialité</div>
+                                  <div class="nav-item-line inverse"></div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
                 <div class="page-padding">
-                    <div class="container-xlarge">
-                        <div class="padding-bottom padding-large">
-                            <div class="footer-bottom">
-                                <div class="text-meta inverse-text-color-muted">© crée par tobi studio.</div>
-                                <div class="subnav">
-                                    <a href="#" class="subnav-item inverse w-inline-block">
-                                        <div class="subnav-item-text">2023.</div>
-                                        <div class="subnav-item-line inverse"></div>
-                                    </a>
-                                    <a href="#" class="subnav-item inverse w-inline-block"></a>
-                                </div>
-                            </div>
+                  <div class="container-xlarge">
+                    <div class="padding-bottom padding-large">
+                      <div class="footer-bottom">
+                        <div class="text-meta inverse-text-color-muted">© crée par tobi studio.</div>
+                        <div class="subnav">
+                          <a href="#" class="subnav-item inverse w-inline-block">
+                            <div class="subnav-item-text">2023.</div>
+                            <div class="subnav-item-line inverse"></div>
+                          </a>
+                          <a href="#" class="subnav-item inverse w-inline-block"></a>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
+              </div>
             <div class="banner-circle-wrapper">
                 <a href="https://tobistudio.fr/"
                     class="banner-circle w-inline-block"><img src="images/653344d7d827f09432016141_banner-circle-1.webp"

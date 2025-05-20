@@ -1624,6 +1624,66 @@
     }
   });
 
+
+
+//testimonial
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.getElementById('testimonialSlider');
+  const dots = document.querySelectorAll('.slider-dot');
+  const prevButton = document.getElementById('prevButton');
+  const nextButton = document.getElementById('nextButton');
+  const slides = document.querySelectorAll('.testimonial-slide');
+  
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  
+  // Function to update slider position
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    // Update active dot
+    dots.forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+  
+  // Next slide
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  }
+  
+  // Previous slide
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  }
+  
+  // Event listeners for controls
+  nextButton.addEventListener('click', nextSlide);
+  prevButton.addEventListener('click', prevSlide);
+  
+  // Dot navigation
+  dots.forEach((dot) => {
+    dot.addEventListener('click', function() {
+      currentIndex = parseInt(this.getAttribute('data-index'));
+      updateSlider();
+    });
+  });
+  
+  // Auto advance slides every 5 seconds
+  setInterval(nextSlide, 5000);
+  
+  // Initialize slider
+  updateSlider();
+});
+
+
   // node_modules/@babel/runtime/helpers/interopRequireDefault.js
   var require_interopRequireDefault = __commonJS({
     "node_modules/@babel/runtime/helpers/interopRequireDefault.js"(exports, module) {
