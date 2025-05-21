@@ -2062,10 +2062,19 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
   <!-- Supabase JS client -->
   <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
   
-  <!-- Page View Tracking Script -->
+  <!-- EmailJS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- Page View Tracking and Email Notification Script -->
   <script>
     document.addEventListener('DOMContentLoaded', async function() {
       try {
+        // Initialize EmailJS
+        (function() {
+          // Replace with your EmailJS user ID
+          emailjs.init("xxNXFucuqIoyHW39x");
+        })();
+        
         // Initialize Supabase client
         const supabaseUrl = 'https://pubjosirktxzzyjmmrgm.supabase.co';
         const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1Ympvc2lya3R4enp5am1tcmdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjY0NjYsImV4cCI6MjA2MzQwMjQ2Nn0.QiPVIjbLX97GtjP4i8nP8aBQSG-ZBV1QLF_jJMQa9Bo';
@@ -2074,8 +2083,8 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
         const { createClient } = supabase;
         const supabaseClient = createClient(supabaseUrl, supabaseKey);
         
-        // Track the page view
-        trackPageView(supabaseClient);
+        // Track the page view and send email notification
+        await trackPageView(supabaseClient);
         
         // Function to handle page view tracking
         async function trackPageView(client) {
@@ -2115,6 +2124,9 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
               await insertPageView(client, newViews);
             } else {
               console.log('Page view tracked successfully. Current count:', newViews);
+              
+              // Send email notification
+              sendEmailNotification('site-gratuit', newViews);
             }
           } catch (err) {
             console.error('Error in trackPageView function:', err);
@@ -2136,9 +2148,51 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
               console.error('Fallback insert failed:', error);
             } else {
               console.log('Fallback page view tracking successful');
+              
+              // Send email notification here too
+              sendEmailNotification('site-gratuit', viewCount);
             }
           } catch (err) {
             console.error('Error in insertPageView function:', err);
+          }
+        }
+        
+        // Function to send email notification via EmailJS
+        function sendEmailNotification(pageName, viewCount) {
+          try {
+            // Collect visitor information
+            const visitorInfo = {
+              page: pageName,
+              url: window.location.href,
+              timestamp: new Date().toLocaleString(),
+              views: viewCount,
+              userAgent: navigator.userAgent,
+              referrer: document.referrer || 'Direct visit',
+              screenSize: `${window.screen.width}x${window.screen.height}`
+            };
+            
+            // Send the email using EmailJS
+            // Replace with your service ID and template ID
+            emailjs.send(
+              "service_56emr61", // Your EmailJS service ID
+              "template_0dv8r19", // Your EmailJS template ID
+              {
+                page_name: visitorInfo.page,
+                page_url: visitorInfo.url,
+                view_count: visitorInfo.views,
+                timestamp: visitorInfo.timestamp,
+                visitor_info: JSON.stringify(visitorInfo, null, 2)
+              }
+            ).then(
+              function(response) {
+                console.log("Email notification sent successfully:", response);
+              },
+              function(error) {
+                console.error("Email notification failed:", error);
+              }
+            );
+          } catch (err) {
+            console.error('Error sending email notification:', err);
           }
         }
       } catch (error) {
