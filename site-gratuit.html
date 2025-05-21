@@ -2058,5 +2058,93 @@ Uncomment this CSS to use it in the project. Leave this message for future hand-
     crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
   <script src="js/nav-fix.js" type="text/javascript"></script>
+
+  <!-- Supabase JS client -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  
+  <!-- Page View Tracking Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        // Initialize Supabase client
+        const supabaseUrl = 'https://pubjosirktxzzyjmmrgm.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1Ympvc2lya3R4enp5am1tcmdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjY0NjYsImV4cCI6MjA2MzQwMjQ2Nn0.QiPVIjbLX97GtjP4i8nP8aBQSG-ZBV1QLF_jJMQa9Bo';
+        
+        // Create Supabase client
+        const { createClient } = supabase;
+        const supabaseClient = createClient(supabaseUrl, supabaseKey);
+        
+        // Track the page view
+        trackPageView(supabaseClient);
+        
+        // Function to handle page view tracking
+        async function trackPageView(client) {
+          try {
+            // First, try to get the current count
+            const { data, error: fetchError } = await client
+              .from('page_views')
+              .select('views')
+              .eq('page_name', 'site-gratuit')
+              .single();
+            
+            if (fetchError && fetchError.code !== 'PGRST116') {
+              console.error('Error fetching current view count:', fetchError);
+              // Try direct insert if select fails for some reason
+              await insertPageView(client, 1);
+              return;
+            }
+            
+            // Determine the new count (default to 1 if no existing record)
+            const currentViews = data?.views || 0;
+            const newViews = currentViews + 1;
+            
+            // Update the record with incremented view count
+            const { error } = await client
+              .from('page_views')
+              .upsert({
+                page_name: 'site-gratuit',
+                views: newViews,
+                last_viewed: new Date().toISOString()
+              }, {
+                onConflict: 'page_name'
+              });
+              
+            if (error) {
+              console.error('Error updating page view:', error);
+              // Try fallback method if update fails
+              await insertPageView(client, newViews);
+            } else {
+              console.log('Page view tracked successfully. Current count:', newViews);
+            }
+          } catch (err) {
+            console.error('Error in trackPageView function:', err);
+          }
+        }
+        
+        // Fallback function for direct insert
+        async function insertPageView(client, viewCount) {
+          try {
+            const { error } = await client
+              .from('page_views')
+              .insert({
+                page_name: 'site-gratuit',
+                views: viewCount,
+                last_viewed: new Date().toISOString()
+              });
+              
+            if (error) {
+              console.error('Fallback insert failed:', error);
+            } else {
+              console.log('Fallback page view tracking successful');
+            }
+          } catch (err) {
+            console.error('Error in insertPageView function:', err);
+          }
+        }
+      } catch (error) {
+        console.error('Error in Supabase initialization:', error);
+      }
+    });
+  </script>
 </body>
 </html>
